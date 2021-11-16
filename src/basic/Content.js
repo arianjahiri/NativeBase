@@ -3,6 +3,7 @@ import { connectStyle } from 'native-base-shoutem-theme';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { SafeAreaView } from 'react-native';
+import { KeyboardAwareScrollView } from '@codler/react-native-keyboard-aware-scroll-view';
 
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
 import getStyle from '../utils/getStyle';
@@ -26,7 +27,7 @@ class Content extends PureComponent {
 
     return (
       <SafeAreaView style={containerStyle}>
-        {/* <KeyboardAwareScrollView
+        <KeyboardAwareScrollView
           automaticallyAdjustContentInsets={false}
           resetScrollToCoords={disableKBDismissScroll ? null : { x: 0, y: 0 }}
           keyboardShouldPersistTaps={keyboardShouldPersistTaps || 'handled'}
@@ -41,8 +42,8 @@ class Content extends PureComponent {
           ]}
         >
           {children}
-        </KeyboardAwareScrollView> */}
-        {children}
+        </KeyboardAwareScrollView>
+        {/* {children} */}
       </SafeAreaView>
     );
   }
