@@ -50,9 +50,9 @@ class Content extends PureComponent {
 }
 
 Content.propTypes = {
-  // disableKBDismissScroll: PropTypes.bool,
-  // keyboardShouldPersistTaps: PropTypes.string,
-  // padder: PropTypes.bool,
+  disableKBDismissScroll: PropTypes.bool,
+  keyboardShouldPersistTaps: PropTypes.string,
+  padder: PropTypes.bool,
   style: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.number,
