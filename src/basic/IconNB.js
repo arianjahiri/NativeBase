@@ -24,9 +24,9 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
 const Icomoon = createIconSetFromIcoMoon(icoMoonConfig);
 
 class IconNB extends React.PureComponent {
-  static contextTypes = {
-    theme: PropTypes.object,
-  };
+  // static contextTypes = {
+  //   theme: PropTypes.object,
+  // };
 
   constructor(props) {
     super(props);
@@ -40,7 +40,7 @@ class IconNB extends React.PureComponent {
     }
   }
 
-  setRoot(c){
+  setRoot(c) {
     this._root = c;
   }
 
@@ -122,8 +122,8 @@ IconNB.propTypes = {
     'MaterialIcons',
     'Octicons',
     'SimpleLineIcons',
-    'Zocial',
-  ]),
+    'Zocial'
+  ])
 };
 
 const StyledIconNB = connectStyle(

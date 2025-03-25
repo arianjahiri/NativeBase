@@ -16,13 +16,12 @@ import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
 
 import { Text } from './Text';
 
-
 class Button extends React.PureComponent {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  // static contextTypes = {
+  //   theme: PropTypes.object
+  // };
 
-  setRoot(c){
+  setRoot(c) {
     this._root = c;
   }
 
@@ -41,14 +40,14 @@ class Button extends React.PureComponent {
   }
 
   prepareRootProps() {
-
-    const {style, ...others} = this.props;
+    const { style, ...others } = this.props;
 
     return {
-      style: StyleSheet.flatten(StyleSheet.compose(this.getInitialStyle().borderedBtn, style)),
+      style: StyleSheet.flatten(
+        StyleSheet.compose(this.getInitialStyle().borderedBtn, style)
+      ),
       ...others
-    }
-
+    };
   }
 
   render() {
@@ -62,10 +61,12 @@ class Button extends React.PureComponent {
         : React.Children.map(this.props.children, child =>
             child && child.type === Text
               ? React.cloneElement(child, {
-                uppercase: this.props.buttonUppercaseAndroidText === false
-                ? false : variables.buttonUppercaseAndroidText,
-                ...child.props
-              })
+                  uppercase:
+                    this.props.buttonUppercaseAndroidText === false
+                      ? false
+                      : variables.buttonUppercaseAndroidText,
+                  ...child.props
+                })
               : child
           );
 

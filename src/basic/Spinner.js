@@ -7,9 +7,9 @@ import variable from '../theme/variables/platform';
 import mapPropsToStyleNames from '../utils/mapPropsToStyleNames';
 
 class Spinner extends Component {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  // static contextTypes = {
+  //   theme: PropTypes.object
+  // };
   render() {
     const variables = this.context.theme
       ? this.context.theme['@@shoutem.theme/themeStyle'].variables

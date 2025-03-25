@@ -9,9 +9,9 @@ import variable from '../theme/variables/platform';
 import computeProps from '../utils/computeProps';
 
 class Radio extends Component {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  // static contextTypes = {
+  //   theme: PropTypes.object
+  // };
   prepareRootProps() {
     const defaultProps = {
       standardStyle: false
@@ -88,8 +88,10 @@ Radio.propTypes = {
   standardStyle: PropTypes.bool
 };
 
-const StyledRadio = connectStyle('NativeBase.Radio', {}, mapPropsToStyleNames)(
-  Radio
-);
+const StyledRadio = connectStyle(
+  'NativeBase.Radio',
+  {},
+  mapPropsToStyleNames
+)(Radio);
 
 export { StyledRadio as Radio };

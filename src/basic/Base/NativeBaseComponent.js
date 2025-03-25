@@ -1,21 +1,20 @@
 import { Component } from 'react';
-import PropTypes from 'prop-types';
 
 export default class NativeBaseComponent extends Component {
-  static propTypes = {
-    // eslint-disable-next-line react/forbid-prop-types
-    theme: PropTypes.object
-  };
+  // static propTypes = {
+  //   // eslint-disable-next-line react/forbid-prop-types
+  //   theme: PropTypes.object
+  // };
 
-  static contextTypes = {
-    theme: PropTypes.object,
-    foregroundColor: PropTypes.string
-  };
+  // static contextTypes = {
+  //   theme: PropTypes.object,
+  //   foregroundColor: PropTypes.string
+  // };
 
-  static childContextTypes = {
-    theme: PropTypes.object,
-    foregroundColor: PropTypes.string
-  };
+  // static childContextTypes = {
+  //   theme: PropTypes.object,
+  //   foregroundColor: PropTypes.string
+  // };
 
   getChildContext() {
     return {

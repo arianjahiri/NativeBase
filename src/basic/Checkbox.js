@@ -10,9 +10,9 @@ import { PLATFORM } from '../theme/variables/commonColor';
 import computeProps from '../utils/computeProps';
 
 class CheckBox extends Component {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  // static contextTypes = {
+  //   theme: PropTypes.object
+  // };
 
   getInitialStyle(variables) {
     const { color, checked, checkboxType, borderColor } = this.props;

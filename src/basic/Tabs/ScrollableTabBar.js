@@ -31,23 +31,23 @@ const ScrollableTabBar = createReactClass({
     inactiveTextColor: PropTypes.string,
     scrollOffset: PropTypes.number,
     style: PropTypes.shape({
-      style: PropTypes.any,
+      style: PropTypes.any
     }),
     tabStyle: PropTypes.shape({
-      style: PropTypes.any,
+      style: PropTypes.any
     }),
     tabsContainerStyle: PropTypes.shape({
-      style: PropTypes.any,
+      style: PropTypes.any
     }),
     renderTab: PropTypes.func,
     underlineStyle: PropTypes.shape({
-      style: PropTypes.any,
+      style: PropTypes.any
     }),
     onScroll: PropTypes.func
   },
-  contextTypes: {
-    theme: PropTypes.object
-  },
+  // contextTypes: {
+  //   theme: PropTypes.object
+  // },
 
   getDefaultProps() {
     return {
@@ -211,7 +211,6 @@ const ScrollableTabBar = createReactClass({
         </TabHeading>
       </Button>
     );
-
   },
 
   measureTab(page, event) {

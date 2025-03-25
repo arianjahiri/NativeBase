@@ -9,16 +9,14 @@ import { IconNB } from '../IconNB';
 
 import ic from './NBIcons.json';
 
-
 const IS_IOS = Platform.OS === 'ios';
 
-
 class Icon extends React.PureComponent {
-  static contextTypes = {
-    theme: PropTypes.object
-  };
+  // static contextTypes = {
+  //   theme: PropTypes.object
+  // };
 
-  setRoot(c){
+  setRoot(c) {
     this._root = c;
   }
 
@@ -74,20 +72,10 @@ class Icon extends React.PureComponent {
       );
     } else if (this.props.name && (this.props.android || this.props.ios)) {
       return (
-        <IconNB
-          ref={this.setRoot}
-          {...this.props}
-          name={this.getIconName()}
-        />
+        <IconNB ref={this.setRoot} {...this.props} name={this.getIconName()} />
       );
     }
-    return (
-      <IconNB
-        ref={this.setRoot}
-        {...this.props}
-        name={this.getName()}
-      />
-    );
+    return <IconNB ref={this.setRoot} {...this.props} name={this.getName()} />;
   }
 }
 
@@ -105,8 +93,10 @@ Icon.propTypes = {
   type: PropTypes.string
 };
 
-const StyledIcon = connectStyle('NativeBase.Icon', {}, mapPropsToStyleNames)(
-  Icon
-);
+const StyledIcon = connectStyle(
+  'NativeBase.Icon',
+  {},
+  mapPropsToStyleNames
+)(Icon);
 
 export { StyledIcon as Icon };
